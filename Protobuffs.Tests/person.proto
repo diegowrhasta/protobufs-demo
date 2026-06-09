@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option csharp_namespace = "ProtoDemo";
+
+message Address
+{
+  string street = 1;
+  string city = 2;
+}
+
+message Person
+{
+  int32 id = 1;
+  string first_name = 2;
+  string last_name = 3;
+  bool active = 4;
+  double salary = 5;
+
+  Address address = 6;
+
+  repeated string skills = 7;
+}
