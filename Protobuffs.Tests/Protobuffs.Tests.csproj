@@ -16,6 +16,7 @@
     </ItemGroup>
 
     <ItemGroup>
+        <Protobuf Include="payment.proto" />
         <Protobuf Include="person.proto" />
     </ItemGroup>
 </Project>

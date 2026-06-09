@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using Google.Protobuf;
+using Protobuffs.Tests;
 using ProtoDemo;
 
 // Simple usage of auto-generated class (from .proto file)
@@ -73,3 +74,4 @@ Console.WriteLine(restored.FirstName);
 //
 // Console.WriteLine(restored.FirstName);
 
+OneOfExample.Run();

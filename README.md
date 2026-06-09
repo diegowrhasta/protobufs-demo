@@ -8,7 +8,6 @@ With:
 - Grpc.Tools
 
 And marking the proto file in your csproj:
-
 ````xml
 <ItemGroup>
         <Protobuf Include="person.proto" />
@@ -28,3 +27,17 @@ The auto-generated classes, are actually super complex, and have tons of methods
 bytes, arrays to serialize, deserialize, you just need to access the respective property and method.
 
 E.g., `Person.Parser.ParseFrom(...)`
+
+## Extra notes
+
+If you have the `Grpc.Tools` Nuget installed, or perhaps this is a Rider thing, (not sure), the `.csproj` automatically references 
+the proto to build and it has tons of other attributes besides the simple reference to the file.
+
+**But, well it doesn't work, for whatever reason, the simple reference seems to be more than enough**
+
+## One Of
+
+Why Use `oneof` instead of Nullable fields?
+
+With `oneof` protobuf enforces RULES.
+

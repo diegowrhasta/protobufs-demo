@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option csharp_namespace = "ProtoDemo";
+
+message CreditCardPayment
+{
+  string card_number = 1;
+}
+
+message BankTransferPayment
+{
+  string account_number = 1;
+}
+
+message Payment
+{
+  oneof payment_method
+  {
+    CreditCardPayment credit_card = 1;
+    BankTransferPayment bank_transfer = 2;
+    string paypal_email = 3;
+  }
+}
